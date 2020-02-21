@@ -44,7 +44,7 @@ class RicoNeitzel_PaymentFilter_Helper_Payment_Data extends Mage_Payment_Helper_
                 if (
                     in_array(
                         $method->getCode(),
-                        Mage::helper('payfilter')->getForbiddenPaymentMethodsForCart())
+                        Mage::helper('payfilter')->getForbiddenPaymentMethodsForCart($quote))
                 ) {
                     continue;
                 }
